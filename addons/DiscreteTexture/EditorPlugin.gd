@@ -2,9 +2,12 @@ tool
 extends EditorPlugin
 
 
+var _discrete_texture_inspector_plugin := preload("EditorInspectorPlugin.gd").new()
+
+
 func _enter_tree() -> void:
-	pass
+	add_inspector_plugin(_discrete_texture_inspector_plugin)
 
 
 func _exit_tree() -> void:
-	pass
+	remove_inspector_plugin(_discrete_texture_inspector_plugin)
